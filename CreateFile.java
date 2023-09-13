@@ -16,6 +16,7 @@ public class CreateFile {
 
          try{   
             Files.createDirectories(PathRef);
+            System.out.println("folder created");
             }catch(FileAlreadyExistsException e){
                 System.out.println("file already exist");
             }catch(IOException e){

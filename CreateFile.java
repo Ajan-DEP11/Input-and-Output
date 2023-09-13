@@ -1,4 +1,7 @@
 import java.io.File;
+import java.io.IOException;
+import java.nio.file.FileAlreadyExistsException;
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
@@ -10,6 +13,15 @@ public class CreateFile {
         System.out.println(mkdir?"file created":"file ALREADY EXIST");
 
         Path PathRef = Paths.get("/home/ajan/Desktop/Ajan new file");
+
+         try{   
+            Files.createDirectories(PathRef);
+            }catch(FileAlreadyExistsException e){
+                System.out.println("file already exist");
+            }catch(IOException e){
+                System.out.println("IO implmented");
+                e.getStackTrace();
+            }
         
     }
 }

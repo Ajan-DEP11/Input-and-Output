@@ -16,6 +16,7 @@ public class CareateFile2 {
          Path path = Paths.get("Dep11");
          try{
             Files.createDirectories(path);
+            System.out.println("file 2 created ");
 
 
          }catch(FileAlreadyExistsException e){

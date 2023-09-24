@@ -10,6 +10,7 @@ public class FileCreate2 {
 
         boolean createNewFile = file.createNewFile();
         System.out.println("File created");
+
         System.out.println(file.createNewFile());
         System.out.println(file.getPath());
         System.out.println(file.exists());
@@ -18,6 +19,8 @@ public class FileCreate2 {
         System.out.println(file.canWrite());
        // } catch(FileAlreadyExistsException e){
          //   System.out.println(e);
+         file.delete();
+         System.out.println("file deleted");
         }catch(IOException e){
             System.out.println(e);
         }
